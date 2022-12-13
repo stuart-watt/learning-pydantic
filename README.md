@@ -1,5 +1,5 @@
 # learning-pydantic
-A small repo to learn Pydantic
+A small repo to learn basic Pydantic
 
 ### To get started
 create a conda environment and install pydantic
@@ -10,3 +10,5 @@ pip install pydantic
 pip install pydantic[dotenv]
 ```
 
+### Pydantic docs:
+https://docs.pydantic.dev/
