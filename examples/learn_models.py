@@ -48,7 +48,31 @@ if __name__ == "__main__":
 
     # You can access the class values using the dict or json methods
     user = PydanticUser(id=123, name="David")
-    print("\n", user.dict())
+    print("\n", user.dict(), sep="")
     print(user.json())
 
-    print(user.schema())
+# Output:
+# Ordinary User class
+# id: <class 'int'> = 123, name: <class 'str'> = John Doe
+# id: <class 'str'> = 123, name: <class 'str'> = John Doe
+# id: <class 'float'> = 123.45, name: <class 'str'> = John Doe
+# id: <class 'bool'> = True, name: <class 'str'> = John Doe
+# id: <class 'tuple'> = (1, 2, 3), name: <class 'str'> = John Doe
+# id: <class 'int'> = 123, name: <class 'str'> = David
+# id: <class 'int'> = 123, name: <class 'int'> = 1
+# id: <class 'int'> = 123, name: <class 'bool'> = True
+# id: <class 'int'> = 123, name: <class 'tuple'> = (1, 2, 3)
+
+# Pydantic User class
+# id: <class 'int'> = 123, name: <class 'str'> = John Doe
+# id: <class 'int'> = 123, name: <class 'str'> = John Doe
+# id: <class 'int'> = 123, name: <class 'str'> = John Doe
+# id: <class 'int'> = 1, name: <class 'str'> = John Doe
+# id: value is not a valid integer
+# id: <class 'int'> = 123, name: <class 'str'> = David
+# id: <class 'int'> = 123, name: <class 'str'> = 1
+# id: <class 'int'> = 123, name: <class 'str'> = True
+# name: str type expected
+
+# {'id': 123, 'name': 'David'}
+# {"id": 123, "name": "David"}

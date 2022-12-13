@@ -47,3 +47,7 @@ if __name__=="__main__":
     except ValidationError as e:
         for error in json.loads(e.json()):
             print(f"{error['loc'][0]}: {error['msg']}")
+
+# Output:
+# last_name: first_name cannot be the same as last_name
+# address: Address cannot be a PO Box

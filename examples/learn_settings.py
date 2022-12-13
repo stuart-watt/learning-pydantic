@@ -42,3 +42,9 @@ if __name__=="__main__":
     print(Settings_2().json())
     print(Settings_3().json())
     print(Settings_4().json())
+
+# Output:
+# {"user_name": "no name"}
+# {"user_name": "David"}
+# {"user_name": "Steve"}
+# {"user_name": "David", "age": 45}

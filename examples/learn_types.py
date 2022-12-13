@@ -40,3 +40,9 @@ if __name__=="__main__":
     except ValidationError as e:
         for error in json.loads(e.json()):
             print(f"{error['loc'][0]}: {error['msg']}")
+
+# Outputs:
+# id: ensure this value is greater than 0
+# name: ensure this value has at most 20 characters
+# age: ensure this value is less than 100
+# height: value is not a valid float
